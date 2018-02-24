@@ -24,9 +24,9 @@ public class spee extends AppCompatActivity {
     ImageButton start, back;
     TextView instructions, worpm, guide;
     double startTime, endTime;
+    double convertion = 60000;
     SpeechRecognizer mSpeechRecognizer;
     Intent mSpeechRecognizerIntent;
-    double convertion = 60000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +41,12 @@ public class spee extends AppCompatActivity {
         back = findViewById(R.id.imageButton2);
 
         mSpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
-
         mSpeechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,
                 Locale.getDefault());
         mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Begin Speaking");
-
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,9 +81,7 @@ public class spee extends AppCompatActivity {
                     recording.setVisibility(View.GONE);
                     results.setVisibility(View.VISIBLE);
                     double minutes = (endTime - startTime)/convertion;
-                    android.util.Log.i("asdfasdfasdfasdf", "" + minutes);
                     int wpm = (int)(countWords(result.get(0))/minutes);
-                    android.util.Log.i("fdgdsfgsdgsdfgsdf", "" + wpm);
                     countDownAnim(worpm, wpm);
                     if (wpm <= 150 && wpm >= 110) {
                         guide.setText("You are speaking just right");
@@ -106,7 +102,6 @@ public class spee extends AppCompatActivity {
         }
 
         String[] words = input.split("\\s+");
-        android.util.Log.i(Integer.toString(words.length), "fdsgdfgsdfgsdfg");
         return words.length;
     }
 
