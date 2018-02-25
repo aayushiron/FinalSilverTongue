@@ -11,7 +11,7 @@ import com.karan.churi.PermissionManager.PermissionManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton emotion, speed;
+    ImageButton emotion, speed, filler;
     PermissionManager permissionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         emotion = findViewById(R.id.button);
         speed = findViewById(R.id.button4);
+        filler = findViewById(R.id.imageButton6);
 
         emotion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent j = new Intent(getApplicationContext(), spee.class);
                 startActivity(j);
+            }
+        });
+
+        filler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), filler.class);
+                startActivity(i);
             }
         });
     }

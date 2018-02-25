@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".emo" />
-        <activity android:name=".spee"></activity>
+        <activity android:name=".spee" />
+        <activity android:name=".filler"></activity>
     </application>
 
 </manifest>
