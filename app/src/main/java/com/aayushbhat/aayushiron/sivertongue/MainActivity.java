@@ -1,4 +1,4 @@
-package com.example.aayushiron.sivertongue;
+package com.aayushbhat.aayushiron.sivertongue;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;

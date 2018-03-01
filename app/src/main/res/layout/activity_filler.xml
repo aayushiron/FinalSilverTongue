@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aayushiron.sivertongue.filler"
+    tools:context="com.aayushbhat.aayushiron.sivertongue.filler"
     android:background="#302e2e">
 
     <LinearLayout
@@ -23,12 +23,13 @@
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please enter any filter words you would like to identify"
+                android:text="Please enter filler separated by a space"
                 android:fontFamily="@font/modeka"
-                android:textColor="#dfdfdf"
+                android:textColor="#B2682A"
                 android:gravity="center_horizontal"
                 android:textSize="55sp"
-                android:paddingBottom="20sp"/>
+                android:paddingBottom="20sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/editText"
@@ -38,10 +39,10 @@
                 android:inputType="textPersonName"
                 android:hint="Words separated by spaces"
                 android:fontFamily="@font/modeka"
-                android:textColorHint="#dfdfdf"
-                android:textColor="#dfdfdf"
+                android:textColorHint="#B2682A"
+                android:textColor="#B2682A"
                 android:textSize="25sp"
-                android:backgroundTint="#dfdfdf"/>
+                android:backgroundTint="#B2682A"/>
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -67,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Warning: Do not press anything when done speaking"
-                android:textColor="#ffffff"
+                android:textColor="#B2682A"
                 android:textSize="55sp"
                 android:gravity="center_horizontal"
                 android:layout_gravity="top"
@@ -96,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="You have said"
-                android:textColor="#dfdfdf"
+                android:textColor="#B2682A"
                 android:textSize="55sp"
                 android:fontFamily="@font/modeka"
                 android:gravity="center_horizontal"

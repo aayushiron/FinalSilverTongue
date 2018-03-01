@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aayushiron.sivertongue.spee"
+    tools:context="com.aayushbhat.aayushiron.sivertongue.spee"
     android:background="#302e2e">
 
     <LinearLayout
@@ -27,7 +27,7 @@
                 android:text="You were speaking"
                 android:textSize="55sp"
                 android:fontFamily="@font/modeka"
-                android:textColor="#dfdfdf"
+                android:textColor="#B2682A"
                 android:gravity="center_horizontal"/>
 
             <TextView
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="156"
                 android:fontFamily="@font/modeka"
-                android:textColor="#dfdfdf"
+                android:textColor="#B2682A"
                 android:gravity="center_horizontal"
                 android:textSize="130sp" />
 
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="Words Per Minute"
                 android:fontFamily="@font/modeka"
-                android:textColor="#dfdfdf"
+                android:textColor="#B2682A"
                 android:gravity="center_horizontal"
                 android:textSize="55sp"
                 android:paddingBottom="15sp"/>
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:text="Try to speak 2 words slower"
                 android:fontFamily="@font/modeka"
-                android:textColor="#dfdfdf"
+                android:textColor="#B2682A"
                 android:gravity="center_horizontal"
                 android:textSize="55sp"/>
 
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Warning: Do not press anything when done speaking"
-                android:textColor="#ffffff"
+                android:textColor="#B2682A"
                 android:textSize="55sp"
                 android:gravity="center_horizontal"
                 android:layout_gravity="top"

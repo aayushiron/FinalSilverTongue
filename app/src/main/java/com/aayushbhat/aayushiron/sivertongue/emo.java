@@ -1,4 +1,4 @@
-package com.example.aayushiron.sivertongue;
+package com.aayushbhat.aayushiron.sivertongue;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -118,11 +118,11 @@ public class emo extends AppCompatActivity {
         fear.setText("Fear: " + Double.toString(fear1) + "%");
         neutrality.setText("Neutrality: " + Double.toString(neutrality1) + "%");
 
-        happy.setProgress((int) happiness1);
-        angry.setProgress((int) angriness1);
-        sad.setProgress((int) sadness1);
-        afraid.setProgress((int) fear1);
-        neutral.setProgress((int) neutrality1);
+        progBarAnim(happy, (int) happiness1);
+        progBarAnim(angry, (int) angriness1);
+        progBarAnim(sad, (int) sadness1);
+        progBarAnim(afraid, (int) fear1);
+        progBarAnim(neutral, (int) neutrality1);
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,5 +131,24 @@ public class emo extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    public void progBarAnim(final ProgressBar p, final int w) {
+        new Thread(new Runnable() {
+            int counter = 0;
+            public void run() {
+                while (counter <= w) {
+                    try {
+                        Thread.sleep(20);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    p.setProgress(counter);
+                    counter++;
+                }
+
+            }
+
+        }).start();
     }
 }

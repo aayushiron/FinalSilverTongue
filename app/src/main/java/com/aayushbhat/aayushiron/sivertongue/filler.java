@@ -1,11 +1,8 @@
-package com.example.aayushiron.sivertongue;
+package com.aayushbhat.aayushiron.sivertongue;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.SystemClock;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.support.v4.content.res.ResourcesCompat;
@@ -16,10 +13,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -73,7 +70,7 @@ public class filler extends AppCompatActivity {
                 if (mSpeechRecognizerIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(mSpeechRecognizerIntent, 10);
                 } else {
-                    instructions.setText("Your device does not support speech input");
+                    instructions.setText("Your device does not support google play services");
                 }
             }
         });
@@ -93,7 +90,7 @@ public class filler extends AppCompatActivity {
                     for (int i = 0; i < fillers.length; i++) {
                         TextView textView = new TextView(this);
                         textView.setText(fillers[i] + ": " + Integer.toString(count(result.get(0).toLowerCase(), fillers[i].toLowerCase())) + " times.");
-                        textView.setTextColor(Color.parseColor("#dfdfdf"));
+                        textView.setTextColor(Color.parseColor("#B2682A"));
                         textView.setTypeface(typeface);
                         textView.setTextSize(35);
                         textView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -114,7 +111,7 @@ public class filler extends AppCompatActivity {
                         }
                     });
                 } else {
-                    Toast.makeText(getApplicationContext(), "nope", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Please do not click on anything when done speaking", Toast.LENGTH_LONG).show();
                 }
         }
     }

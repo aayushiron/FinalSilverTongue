@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">SiverTongue</string>
+    <string name="app_name">Silver Tongue</string>
+    <string name="actual_name"> </string>
+    <string name="emo">Analyzing Emotion</string>
+    <string name="spee">Measuring Speed</string>
+    <string name="filler">Checking for filler words</string>
 </resources>

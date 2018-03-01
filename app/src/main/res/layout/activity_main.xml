@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aayushiron.sivertongue.MainActivity"
-    android:background="#dfdfdf">
+    tools:context="com.aayushbhat.aayushiron.sivertongue.MainActivity"
+    android:background="#B2682A">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,11 +26,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/modeka"
                 android:gravity="center_horizontal"
-                android:paddingTop="20sp"
                 android:text="Welcome to"
                 android:textColor="#302e2e"
                 android:textSize="65sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:paddingTop="20sp"/>
 
             <TextView
                 android:id="@+id/textView17"
@@ -39,7 +39,7 @@
                 android:fontFamily="@font/modeka"
                 android:gravity="center_horizontal"
                 android:text="Silver Tongue"
-                android:textColor="#302e2e"
+                android:textColor="#dfdfdf"
                 android:textSize="65sp"
                 android:textStyle="bold"
                 android:paddingBottom="14sp"/>

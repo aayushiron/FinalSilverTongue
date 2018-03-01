@@ -1,17 +1,15 @@
-package com.example.aayushiron.sivertongue;
+package com.aayushbhat.aayushiron.sivertongue;
 
 import android.content.Intent;
 import android.os.SystemClock;
-import android.os.health.SystemHealthManager;
-import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,7 +53,7 @@ public class spee extends AppCompatActivity {
                 if (mSpeechRecognizerIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(mSpeechRecognizerIntent, 10);
                 } else {
-                    instructions.setText("Your device does not support speech input");
+                    instructions.setText("Your device does not support google play services");
                 }
             }
         });
@@ -91,7 +89,7 @@ public class spee extends AppCompatActivity {
                         guide.setText("Try to speak " + Integer.toString(wpm - 150) + " wpm less.");
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "nope", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Please do not click on anything when done speaking", Toast.LENGTH_LONG).show();
                 }
         }
     }
